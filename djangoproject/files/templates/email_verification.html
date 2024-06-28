@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Verification</title>
+<link rel="stylesheet" href="verification.css">
+</head>
+<body>
+
+<div class="verification-container">
+  <h2>Account Verification</h2>
+  <p>
+    We are happy you've chosen to create an account with us! If any any point you have any issues remember you can always contact <a href="support.html">support</a>. Thank you and we hope you enjoy the app!
+  </p>
+  
+  <form id="verificationForm" action="verify_action.php" method="post">
+    <div class="container">
+      <button type="submit" onclick="submitFormAndRedirect(event)">Verify</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function submitFormAndRedirect(event) {
+    event.preventDefault();
+
+    window.location.href = 'login.html';
+  }
+</script>
+
+</body>
+</html>

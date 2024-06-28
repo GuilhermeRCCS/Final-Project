@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support</title>
+<link rel="stylesheet" href="support.css">
+</head>
+<body>
+
+<div class="support-container">
+  <h2>Support</h2>
+  
+  <form id="supportForm" action="support_action.php" method="post">
+    <div class="container">
+      <label for="email"><b>Email Address</b></label>
+      <input type="email" placeholder="Enter your email address" name="email" required>
+    </div>
+    
+    <div class="container">
+      <label for="comments"><b>Comments</b></label>
+      <textarea placeholder="Type your comments here" name="comments" rows="5" required></textarea>
+    </div>
+    
+    <div class="container">
+      <button type="submit" onclick="submitFormAndRedirect(event)">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function submitFormAndRedirect(event) {
+    event.preventDefault();
+
+    let form = document.getElementById('supportForm');
+    form.submit();
+
+    window.location.href = 'login.html';
+  }
+</script>
+
+</body>
+</html>
